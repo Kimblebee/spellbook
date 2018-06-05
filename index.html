@@ -2,43 +2,36 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
-
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Spellbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 
 <body>
-    <b>
-        <marquee scrollamount="5"> 3 Loot chests appear before you!</marquee>
-    </b>
-    <h1>Treasure Chest</h1>
-    <h1 id="mimic">Sketchy Treasure Chest</h1>
-    <h1>Treasure Chest</h1>
-    <button id="reveal">Reveal the mimic!</button>
-    <br>
-    <br>
-    <br>
-    <br>
-    <form>
-        Hero Name:
-        <br>
-        <input type="text" id="name" value="Egbert">
-        <br> Class:
-        <br>
-        <input type="text" id="class" value="Super Mega Dragon Wizard">
-        <br>
-        <br>
+  <img src="skull.png" id="skull" alt="">
+  <img src="quill.png" id="quill" alt="">
 
-        <!-- Level: <input type="number" name = "level">
-   -->
 
-    </form>
-    <button id="character">Slay the monster!</button>
+  <h1>Spellbook </h1>
 
+  <form>
+    <div>
+      <input type="text" name="spellName" placeholder="Enter a spell name" autofocus>
+    </div>
+
+    Give your spell a color!
+    <input type="color" id="spellColor" value="#000000">
+    <br>
+    <button type="submit">Add</button>
+
+  </form>
+  <main>
+    <ul id="spells"></ul>
+  </main>
+
+  <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 
 </html>

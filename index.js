@@ -1,29 +1,21 @@
-// Kimberly Rose Crevecoeur
+const form = document.querySelector('form')
 
-const reveal = document.querySelector('#reveal')
-const revealMimic = function () {
-    const heading = document.querySelector('#mimic')
-    heading.textContent = "The mimic has revealed itself!"
-}
-// adding the eventlistener to the "reveal the mimic!" button
-reveal.addEventListener('click', revealMimic)
+const changeHeading = function (ev) {
+  ev.preventDefault()
 
+  //
+  const f = ev.target
+  const spellName = f.spellName.value
+  const spellsDiv = document.querySelector('#spells')
 
+  // changes the color
+  var textColor = document.getElementById('spellColor').value;
 
-// function to change the second header based on the input
-const submit = function () {
-    const heroHeading = document.querySelector('#mimic') // heroname and heroclass are the inputs
-    const heroName = document.querySelector('#name').value
-    const heroClass = document.querySelector('#class').value
+  spellsDiv.innerHTML += `<font color= ${textColor} >${spellName}</font><li></li>`
 
-    const heading = document.querySelector('#mimic')
-
-    heroHeading.textContent = heroName + " the " + heroClass + " has slain the Treasure chest mimic!"
-
+  f.reset()
 }
 
+const changeColor = function () {}
 
-
-const submitButton = document.querySelector("#character")
-
-submitButton.addEventListener('click', submit)
+form.addEventListener('submit', changeHeading)
