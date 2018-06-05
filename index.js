@@ -11,10 +11,21 @@ const changeHeading = function (ev) {
   // changes the color
   var textColor = document.getElementById('spellColor').value;
 
-  spellsDiv.innerHTML += `<font color= ${textColor} >${spellName}</font><li></li>`
+  // spellsDiv.innerHTML += `<li><font color= ${textColor} >${spellName}</font></li>`
+  var x = document.createElement("LI");
+  var t = document.createTextNode(spellName);
+  t.se
+  x.appendChild(t);
+  x.style.color = textColor;
+  document.getElementById("spells").appendChild(x);
 
   f.reset()
 }
+
+
+
+
+
 
 const changeColor = function () {}
 
