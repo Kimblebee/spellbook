@@ -1,0 +1,31 @@
+h1 {
+    color: gold;
+    scale: 20%
+}
+
+#mimic {
+    color: goldenrod;
+    scale: 20%;
+}
+
+body {
+    font-family: "Comic Sans MS";
+    color: aliceblue;
+    font-size: 12px;
+    background-color: black;
+}
+
+form {
+    color: yellow;
+    font-size: 20px;
+}
+
+marquee {
+    background-color: purple;
+    color: gold;
+    font-size: 20px;
+}
+
+input {
+    width: 200px;
+}
