@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,30 +7,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
-
 <body>
   <img src="skull.png" id="skull" alt="">
   <img src="quill.png" id="quill" alt="">
 
 
-  <h1>Spellbook </h1>
+  <h1>Spellbook</h1>
 
   <form>
     <div>
-      <input type="text" name="spellName" placeholder="Enter a spell name" autofocus>
+      <input
+        type="text"
+        name="spellName"
+        placeholder="Enter a spell name"
+        autofocus
+      >
+      <input
+        type="number"
+        name="level"
+        placeholder="Level"
+        class="small"
+        min="1"
+        max="20"
+      >
+      <button type="submit">Add</button>
     </div>
-
-    Give your spell a color!
-    <input type="color" id="spellColor" value="#000000">
-    <br>
-    <button type="submit">Add</button>
-
   </form>
+
   <main>
     <ul id="spells"></ul>
   </main>
 
   <script src="index.js"></script>
 </body>
-
 </html>
