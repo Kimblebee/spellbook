@@ -1,4 +1,6 @@
 const app = {
+
+
   init: function() {
     const form = document.querySelector('form')
     form.addEventListener('submit', ev => {
@@ -12,6 +14,7 @@ const app = {
     el.classList.add(name)
     return el
   },
+  
 
   renderItem: function(spell) {
     // ['name', 'level']
@@ -25,7 +28,7 @@ const app = {
 
     const item = document.createElement('li')
     item.classList.add('spell')
-
+    
     // append each <span> to the <li>
     childElements.forEach(el => {
       item.appendChild(el)
@@ -44,6 +47,9 @@ const app = {
       level: f.level.value,
     }
 
+    spellArray.push(spell)
+    console.log(spellArray.toString)
+
     const item = this.renderItem(spell)
 
     const list = document.querySelector('#spells')
@@ -52,5 +58,6 @@ const app = {
     f.reset()
   },
 }
+var spellArray = ['eggs'];
 
 app.init()
